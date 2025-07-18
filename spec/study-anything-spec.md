@@ -17,6 +17,9 @@ Study Anything is a simple Flask web app that allows users to review study mater
 - Review all the cards in a deck
 
 ## Features - using API
+- Get all decks (without the cards)
+- Get all the cards in the database
+- Get all the cards of a deck
 - Add deck
 - Delete deck
 - Create a new flashcard and add it to an existing deck
@@ -42,6 +45,18 @@ From top  to bottom:
     - Total number of cards ('Cards: #')
     - Total number of reviews ('Reviews: #')
 
+### Study Page
+
+### Add Decks Page
+### Add Cards Page
+### Browse Page
+
+
+---
+
+## API
+
+see `spec/study-anything.openapi.yaml`.
 
 
 

@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Study Anything Web App OpenAPI Description
+  version: 0.0.1
+paths:
+  /api/decks/list:
+    get:
+      summary: Get decks list
+      description: 
+      parameters:
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    
+
+
+  /api/decks/add:
+    post:
+      summary: Add a new deck 
+      description:
+      parameters:
+      responses:
+  /api/deck/delete:
+    post:
+      summary: Delete a deck and its cards
+      description:
+      parameters:
+      responses:
+  /api/cards/list:
+    get:
+      summary: Get list of all cards
+      description:
+      parameters:
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+  /api/cards/list/<deck_id>:
+    get:
+      summary: Get a list of all cards in a deck
+      description:
+      parameters:
+      responses:
+        "200":
+          description: "OK"
+          content:
+  /api/cards/add:
+    post:
+      summary: Add a new card
+      description: Add a new card to an existing deck
+      parameters:
+      responses:
+  /api/cards/delete:
+    post:
+      summary: Delete and existing card
+      description: 
+      parameters:
+      responses:
+
