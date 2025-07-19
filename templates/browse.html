@@ -4,7 +4,11 @@ Browse - Study Anything
 {% endblock %}
 {% block Content%}
 <h1> Browse </h1>
-<p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+{% for card in cards %}
+    Front: {{ card.front }} <br> <br>
+    Back: {{ card.back }} <br><br>
+    Deck: {{ card.deck_id }}
+    <hr>
+    <br>
+{% endfor %}
 {% endblock %}

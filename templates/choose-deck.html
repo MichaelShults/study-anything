@@ -8,10 +8,10 @@ Study - Study Anything
 <form id ="select-deck-form" method="get">
     <select name="deck-id" id="deck-id" onchange="handleDropdown(this.value)">
         {% for deck in decks %}
-        <option value="{{ deck.id }}"> {{deck.name}} </option>
+        <option value="{{ deck.id }}"> {{ deck.name }} </option>
         {% endfor %}
     </select>
-    <input type="submit"> submit </input>
+    <input type="submit" value="submit">
 </form>
 
 {% endblock %}

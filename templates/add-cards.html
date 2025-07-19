@@ -3,8 +3,13 @@
 Add Cards - Study Anything
 {% endblock %}
 {% block Content%}
-<h1> Add Cards </h1>
-<p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-<p> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+<form method="post" action="/add-cards">
+    <label for="deck-id"> Deck id: </label>
+    <input type="text" name="deck-id">
+    <label for="front"> Front: </label>
+    <input type="text" name="front">
+    <label for="back"> Back: </label>
+    <input type="text" name="back">
+    <input type="submit" value="submit">
+</form>
 {% endblock %}

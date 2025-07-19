@@ -5,6 +5,11 @@ Study - Study Anything
 {% block Content%}
 <h1> Study </h1>
 
-Here you will be able to study the cards of the deck
+{% for card in cards %}
+    {{ card.front }} <br> <br>
+    {{ card.back }} <br><br>
+    <hr>
+    <br>
+{% endfor %}
 
 {% endblock %}
