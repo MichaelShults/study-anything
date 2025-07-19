@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block Title %}
+Browse - Study Anything
+{% endblock %}
+{% block Content%}
+<h1> Browse </h1>
+{% for card in cards %}
+    Front: {{ card.front }} <br> <br>
+    Back: {{ card.back }} <br><br>
+    Deck: {{ card.deck_id }}
+    <hr>
+    <br>
+{% endfor %}
+{% endblock %}

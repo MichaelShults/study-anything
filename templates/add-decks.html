@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block Title %}
+Add Decks - Study Anything
+{% endblock %}
+{% block Content%}
+<h1> Add Decks </h1>
+<form method="post" action="/add-decks">
+    <label for="deck-name"> Deck Name: </label>
+    <input type="text" name="deck-name">
+    <input type="submit" value="submit">
+</form>
+{% endblock %}

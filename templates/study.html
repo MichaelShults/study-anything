@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block Title %}
+Study - Study Anything
+{% endblock %}
+{% block Content%}
+<h1> Study </h1>
+
+{% for card in cards %}
+    {{ card.front }} <br> <br>
+    {{ card.back }} <br><br>
+    <hr>
+    <br>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block Title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> </style>
+    </head>
+    <body>
+        {% include 'fragments/main-menu.html' %}
+        {% block Content %}
+        {% endblock %}
+    </body>
+</html>
