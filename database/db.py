@@ -20,7 +20,7 @@ meta.create_all(engine)
 
 def get_decks():
     with engine.connect() as conn:
-        res = conn.execute(select(decks.c.name))
+        res = conn.execute(select(decks.c))
         rows = res.fetchall()
     return rows
 

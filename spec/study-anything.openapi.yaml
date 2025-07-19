@@ -6,7 +6,7 @@ paths:
   /api/decks/list:
     get:
       summary: Get decks list
-      description: 
+      description: Get a list of all decks, i.e. a list of deck objects (id, deck-name)
       parameters:
       responses:
         "200":
@@ -18,21 +18,33 @@ paths:
                 items:
                   type: object
                   properties:
-                    
-
 
   /api/decks/add:
     post:
       summary: Add a new deck 
       description:
       parameters:
+        - name: deck-name
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
+        "201":
+          description: The new deck was added successfully
   /api/deck/delete:
     post:
       summary: Delete a deck and its cards
       description:
       parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            integer
       responses:
+        "200":
+          description: The deck and its cards were deleted successfully
   /api/cards/list:
     get:
       summary: Get list of all cards
@@ -43,25 +55,48 @@ paths:
           description: "OK"
           content:
             application/json:
-  /api/cards/list/<deck_id>:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+
+  /api/cards/list/{deck_id}:
     get:
       summary: Get a list of all cards in a deck
       description:
-      parameters:
+      parameters: 
+        - name: deck_id
+          in: path
+          required: true
+          schema:
+            integer
       responses:
         "200":
           description: "OK"
           content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
   /api/cards/add:
     post:
       summary: Add a new card
       description: Add a new card to an existing deck
       parameters:
+        - name: 
       responses:
-  /api/cards/delete:
+        "201":
+          description: "New card was added successfully"
+  /api/cards/delete/{card_id}:
     post:
       summary: Delete and existing card
-      description: 
+      description: Delete a card by id
       parameters:
+        - name: card_id
+          in:
+
       responses:
 
