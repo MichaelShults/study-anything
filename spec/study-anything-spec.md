@@ -1,6 +1,6 @@
 # Study Anything Spec v1.0
 ### Created: 17/07/2025
-### Last Updated: 20/07/2025
+### Last Updated: 21/07/2025
 ### Author: Michael Shults
 
 ## Description
@@ -79,7 +79,7 @@ Menu items are (left to right): 'Home', Study', 'Add Decks', 'Add Cards', 'Brows
             - Large square box for the front and back of the current card
                 - Front of the card occupies the top half, back occupies bottom half.
                 - Back is is not visible (hidden) when the state is "Feedback"
-            - Three button:
+            - Three buttons:
                 - Left button is either "Show Answer" (when in "Test" state) or "Hide Answer" (when in "Feedback" state)
                 - Middle button is "Previous"
                 - Right button is "Next"
@@ -91,6 +91,13 @@ Menu items are (left to right): 'Home', Study', 'Add Decks', 'Add Cards', 'Brows
     - The page contents are centered.  
     - Elements from top to bottom:
         - Main Menu
+        - Large title: "Add Decks"
+        - Add deck form:
+            - From left to right:
+                - Label "Deck Name:"
+                - A textbox
+                - A button with the text "Add Deck"
+
 
 ### Add Cards Page
 - Route: `/add-cards`
@@ -99,6 +106,15 @@ Menu items are (left to right): 'Home', Study', 'Add Decks', 'Add Cards', 'Brows
     - The page contents are centered.  
     - Elements from top to bottom:
         - Main Menu
+        - Large title: "Add Cards"
+        - Add card form:
+            - From top to bottom
+                - Label: "Deck Name:" and to the right of it a dropdown with the names of all decks
+                - Label: "Front"
+                - Large rectangular multi-line textbox
+                - Label: "Back"
+                - Large rectangular multi-line textbox
+                - Button with the text "Add Card"
 
 ### Browse Page
 - Route: `/browse`
@@ -107,6 +123,20 @@ Menu items are (left to right): 'Home', Study', 'Add Decks', 'Add Cards', 'Brows
     - The page contents are centered.  
     - Elements from top to bottom:
         - Main Menu
+        - Large title: "Browse"
+        - List of empty decks (decks with no cards associated with them):
+            - Text: "Empty decks:"
+            - bullet point list of empty deck names
+        - Non empty decks:
+            - For each deck:
+                - Small title "{deck.name}"
+                - The cards of the deck, top to bottom:
+                    - Each Card:
+                        - Label: "Front:"
+                        - Content of the front of the card
+                        - Label "Back:"
+                        - Content of the back of the card
+                    - There is a visible separator between cards (for example a horizontal line)
 
 
 ---
